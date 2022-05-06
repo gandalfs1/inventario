@@ -33,7 +33,7 @@
         <div class="crud-container">
             <div class="crud-header">
                 <h1>Productos en Inventario</h1>
-                <button class="button is-success ">
+                <button class="button is-success" id="openRegisterModal">
                     <i class="fas fa-plus"></i></i>
                     <span>Nuevo Producto</span>
                 </button>
@@ -466,6 +466,23 @@
             </div>
         </div>
     </main>
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" aria-label="close" id="closeRegisterModal"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Save changes</button>
+          </footer>
+        </div>
+      </div>
+
+      <script src="js/scriptJava.js"></script>
 </body>
 
 </html>
