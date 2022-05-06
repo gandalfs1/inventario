@@ -28,3 +28,31 @@ body {
     color: var(--navbar-item-hover) !important;
 }
 /*fin navbar*/
+/*main*/
+.main-content{
+    height: 90vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.main-content .crud-container{
+    width: 60%;
+    border: 10px solid --navbar;
+    padding: 2rem 3rem;
+    overflow: auto;
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 3);
+}
+.main-content .crud-container .crud-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 1rem 2rem;
+    border-bottom: 1px solid;
+}
+.main-content .crud-container .crud-header h1{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.main-content .crud-container .crud-header .button span{
+    margin-left: 10px;
+}
+/***/

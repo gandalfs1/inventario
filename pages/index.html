@@ -1,27 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
-    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <!--//<a class="navbar-item" href="/">
+                <!--//<a class="navbar-item" href="/">
                <!--// <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">-->
-               <a class="navbar-item" href="/">Inventario</a>
-              <!--</a>          
+                <a class="navbar-item" href="/">Inventario</a>
+                <!--</a>          
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
               </a>-->
             </div>
-          </nav>
+        </nav>
     </header>
+
+    <main class="main-content">
+        <div class="crud-container">
+            <div class="crud-header">
+                <h1>Productos en Inventario</h1>
+                <button class="button is-success ">
+                    <i class="fas fa-plus"></i></i>
+                    <span>Nuevo Producto</span>
+                </button>
+            </div>
+            <div  class="table-container">
+                <table class="table  is-striped is-narrow is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Detalle</th>
+                            <th>Entradas</th>
+                            <th>Salidas</th>
+                            <th>Utilidades</th>
+                            <th>Stock</th>
+                            <th>Opcion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td> <button class="button is-warning ">
+                                    <i class="fas fa-pencil-alt"></i></i>
+                                </button>
+                                <button class="button is-danger ">
+                                    <i class="fas fa-trash"></i></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td> <button class="button is-warning ">
+                                <i class="fas fa-pencil-alt"></i></i>
+                            </button>
+                            <button class="button is-danger ">
+                                <i class="fas fa-trash"></i></i>
+                            </button>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <!-- <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                                    title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+                            </td>
+                            <td>38</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>-->
+
+                </table>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
