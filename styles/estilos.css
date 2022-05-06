@@ -1,1 +1,30 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --navbar: #001233;
+    --nabbar-item: #ffffff;
+    --navbar-item-hover: #ffb703;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+/*navbar*/
+.navbar {
+    background-color: var(--navbar);
+}
+
+.navbar-item {
+    color: var(--nabbar-item);
+    font-weight: bold;
+    font-size: 2rem;
+    transition: .3s ease-in-out all;
+    height: 8vh;
+}
+
+.navbar-item:hover {
+    color: var(--navbar-item-hover) !important;
+}
+/*fin navbar*/
