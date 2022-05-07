@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
-  import {  getFirestore, collection } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
+  import {  getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,6 +23,7 @@ const openModal = document.getElementById('openRegisterModal')
 const modal = document.getElementById('modal')
 const closerModal = document.getElementById('closeRegisterModal')
 const registerForm = document.getElementById('register-form')
+//const productRef = firebase.database().ref('products')
 
 const showRegisterModal = () =>{
     modal.classList.toggle('is-active')
@@ -38,5 +39,11 @@ registerForm.addEventListener('submit', (e) => {
     const cantidad = registerForm['cantidad'].value
     const precioTotal = registerForm['precioTotal'].value
     const detalle = registerForm['detalle'].value
-    console.log(codigo, precioUnitario, cantidad, precioTotal, detalle)
+    register(codigo, precioUnitario, cantidad, precioTotal, detalle)
+
 })
+
+const register = (codigo, precioUnitario, cantidad, precioTotal, detalle ) => {
+    console.log(codigo, precioUnitario, cantidad, precioTotal, detalle)
+   // addDoc(collection(db,'products'),{codigo, precioUnitario, cantidad, precioTotal, detalle});
+}
