@@ -1,3 +1,24 @@
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
+  import {  getFirestore, collection } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBD-kmtHZxoRt3Icm_u46e9158xOUkgKn0",
+    authDomain: "inventario-b6fb4.firebaseapp.com",
+    projectId: "inventario-b6fb4",
+    storageBucket: "inventario-b6fb4.appspot.com",
+    messagingSenderId: "24900038826",
+    appId: "1:24900038826:web:99def3cc94c3b4da7e20d3"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  const db = getFirestore()
+
 const openModal = document.getElementById('openRegisterModal')
 const modal = document.getElementById('modal')
 const closerModal = document.getElementById('closeRegisterModal')
