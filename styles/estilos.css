@@ -6,6 +6,9 @@
     --navbar: #001233;
     --nabbar-item: #ffffff;
     --navbar-item-hover: #ffb703;
+    --textcolortHead: #ffffff;
+    --theadColor: #001233;
+    --tbodyColorhover: #00183346;
 }
 
 body {
@@ -14,7 +17,9 @@ body {
 /*navbar*/
 .navbar {
     background-color: var(--navbar);
+    justify-content: space-between;
 }
+
 
 .navbar-item {
     color: var(--nabbar-item);
@@ -55,4 +60,29 @@ body {
 .main-content .crud-container .crud-header .button span{
     margin-left: 10px;
 }
-/***/
+/*fin main*/
+
+/*table*/
+.tableWrap {
+    height: 60vh;
+    overflow: auto;
+}
+thead tr th {
+    position: sticky;
+    top: 0;
+    padding: 16px;
+    padding-left: 15px;
+    border-left: 1px dotted rgba(200, 209, 224, 0.6);
+    border-bottom: 1px solid #e8e8e8;
+    background: var(--theadColor);
+    color: var(--textcolortHead) !important;
+    text-align: left;
+    /* With border-collapse, we must use box-shadow or psuedo elements
+    for the header borders */
+    box-shadow: 0px 0px 0 2px #e8e8e8;
+}
+tbody tr:hover {
+    background:  var(--tbodyColorhover) !important ;
+}
+/* fin tabla*/
+ 
