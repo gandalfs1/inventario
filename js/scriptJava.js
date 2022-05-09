@@ -18,6 +18,12 @@ var database = firebase.database();
 
 const showRegisterModal = () => {
   modal.classList.toggle('is-active')
+  registerForm['codigo'].value =""
+  registerForm['precioUnitario'].value =""
+  registerForm['cantidad'].value =""
+  registerForm['precioTotal'].value =""
+  registerForm['precioTotal'].value =""
+  registerForm['detalle'].value =""
 }
 
 openModal.addEventListener('click', showRegisterModal)
@@ -50,12 +56,12 @@ window.addEventListener('DOMContentLoaded', async (e) => {
     const productsTable = document.getElementById('products-table');
     productRef.get().then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+       // console.log(snapshot.val());
         productsTable.innerHTML = ''
         productRef.once("value")
         .then(function(snapshot) {
           snapshot.forEach(function(childSnapshot) {
-            console.log(snapshot.child(childSnapshot.key).child("Codigo").val());
+            //console.log(snapshot.child(childSnapshot.key).child("Codigo").val());
             productsTable.innerHTML +=`<tr>
             <th>${snapshot.child(childSnapshot.key).child("Codigo").val()}</th>
             <td>${snapshot.child(childSnapshot.key).child("Detalle").val()}</td>
