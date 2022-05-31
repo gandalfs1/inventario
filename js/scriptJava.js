@@ -30,11 +30,6 @@ const showRegisterModal = () => {
 }
 const showUpdateModal = () => {
   modalUpdate.classList.toggle('is-active')
-  updateForm['codigo'].value = ""
-  updateForm['precioUnitario'].value =""
-  updateForm['cantidad'].value =""
-  updateForm['precioTotal'].value =""
-  updateForm['detalle'].value =""
 }
 openModal.addEventListener('click', showRegisterModal)
 closerModal.addEventListener('click', showRegisterModal)
@@ -89,6 +84,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             </td>
           </tr>`
           updateRegister();
+          delecteRegister();
         });
         
       });
@@ -134,3 +130,15 @@ function updateRegister() {
   });
 }
 
+function delecteRegister() {
+  const updateButtons = document.querySelectorAll('.is-danger');
+  updateButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      console.log("key delete=>", e.currentTarget.dataset.id);
+      const productsRef = firebase.database().ref('products/' + e.currentTarget.dataset.id);
+      productsRef.get().then((doc) => {
+       productsRef.remove();
+      });
+    });
+  });
+}
