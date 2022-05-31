@@ -30,6 +30,11 @@ const showRegisterModal = () => {
 }
 const showUpdateModal = () => {
   modalUpdate.classList.toggle('is-active')
+  updateForm['codigo'].value = ""
+  updateForm['precioUnitario'].value =""
+  updateForm['cantidad'].value =""
+  updateForm['precioTotal'].value =""
+  updateForm['detalle'].value =""
 }
 openModal.addEventListener('click', showRegisterModal)
 closerModal.addEventListener('click', showRegisterModal)
@@ -102,8 +107,8 @@ function updateRegister() {
   const updateButtons = document.querySelectorAll('.is-warning');
   updateButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-      console.log("key =>", e.target.dataset.id);
-      const productsRef = firebase.database().ref('products/' + e.target.dataset.id);
+      console.log("key =>", e.currentTarget.dataset.id);
+      const productsRef = firebase.database().ref('products/' + e.currentTarget.dataset.id);
       productsRef.get().then((doc) => {
         showUpdateModal();
         console.log('update =>',doc.val());
@@ -113,16 +118,17 @@ function updateRegister() {
         updateForm['precioTotal'].value = `${doc.child("PrecioTotal").val()}`;
         updateForm['detalle'].value = `${doc.child("Detalle").val()}`;
 
-     /*
-        firebase.database().ref('products/' + e.target.dataset.id).update({
-        Codigo: updateForm['codigo'].value ,
-        PrecioUnitario: updateForm['precioUnitario'].value,
-        Cantidad: updateForm['cantidad'].value,
-        PrecioTotal: updateForm['precioTotal'].value,
-        Detalle: updateForm['detalle'].value
-      })
-      showUpdateModal()
-     */
+        modalUpdate.addEventListener('submit', (e) => {
+          e.preventDefault()
+           productsRef.update({
+             Codigo: updateForm['codigo'].value ,
+             PrecioUnitario: updateForm['precioUnitario'].value,
+             Cantidad: updateForm['cantidad'].value,
+             PrecioTotal: updateForm['precioTotal'].value,
+             Detalle: updateForm['detalle'].value
+           })
+          showUpdateModal()
+        })
       });
     });
   });
