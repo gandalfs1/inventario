@@ -13,24 +13,82 @@
 </head>
 
 <body>
+    <!--
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <!--//<a class="navbar-item" href="/">
                <!--// <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">-->
-                <a class="navbar-item" href="/">Inventario</a>
-                <!--</a>          
+    <!--  <a class="navbar-item" href="/">Inventario</a>-->
+    <!--</a>          
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
               </a>-->
-              <a class="navbar-item" id="openEntrada">Entrada</a>
+    <!--  <a class="navbar-item" id="openEntrada">Entrada</a>
               <a class="navbar-item" href="/">Salida</a>
               <a class="navbar-item" href="/">Facturar</a>
             </div>
         </nav>
-    </header>
+    </header>-->
+
+    <div class="navigations">
+        <div class="toggle">
+            <ion-icon name="menu" class="open"></ion-icon>
+            <ion-icon name="close-sharp" class="close"></ion-icon>
+        </div>
+        <br>
+        <ul>
+            <li class="list active">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                        </ion-icon>
+                    </span>
+                    <span class="title">Home</span></a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="title">Profile</span></a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    </span>
+                    <span class="title">Message</span></a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="title">Setting</span></a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="help-outline"></ion-icon>
+                    </span>
+                    <span class="title">Help</span></a>
+            </li>
+        </ul>
+    </div>
+   
 
     <main class="main-content">
         <div class="crud-container">
@@ -101,13 +159,13 @@
                                 placeholder="Ej: CILINDRO DE FRENOS INCOLBETS"></textarea>
                         </div>
                     </div>
-                
+
             </section>
             <footer class="modal-card-foot">
                 <button type="submit" class="button is-success">Guardar</button>
-            </form>  
                 </form>
-            </form>  
+                </form>
+                </form>
             </footer>
         </div>
     </div>
@@ -151,27 +209,47 @@
                                 placeholder="Ej: CILINDRO DE FRENOS INCOLBETS"></textarea>
                         </div>
                     </div>
-                
+
             </section>
             <footer class="modal-card-foot">
                 <button type="submit" class="button is-success">Actualizar</button>
-            </form>  
                 </form>
-            </form>  
+                </form>
+                </form>
             </footer>
         </div>
     </div>
-  <!--  <footer class="page-footer">
+    <!--  <footer class="page-footer">
         <div>
             <p>Diseño web By <a href="https://www.linkedin.com/in/franklin-ortiz-5a4b11230">Franklin Ortiz</a></p>
           </p>
         </div>
       </footer>-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script type="module" src="js/scriptJava.js"></script>
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigations = document.querySelector('.navigations');
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active');
+            navigations.classList.toggle('active');
+        }
+        let list = document.querySelectorAll('.list');
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function () {
+                let j = 0;
+                while (j < list.length) {
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active'
+            }
+        }
+    </script>
 </body>
 
 </html>
