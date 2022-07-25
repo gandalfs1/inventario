@@ -25,7 +25,7 @@ body {
     border-top-right-radius: 20px;
     width: 50px;
     box-sizing: initial;  
-    border-left: 2px solid #ffb703;
+    border-left: 3px solid var(--theadColor);
     overflow-x: hidden;
     align-items: center;
     align-content: center;
@@ -33,6 +33,7 @@ body {
 .navigations.active {
     width: 300px;
     background: var(--theadColor);
+    border-left: 2px solid var(--navbar-item-hover);
 }
 
 .navigations ul {
