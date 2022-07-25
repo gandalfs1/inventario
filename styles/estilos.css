@@ -22,7 +22,7 @@ body {
     position: fixed;
     padding: 20px 20px 20px 0px;
     background: var(--navbar-item-hover);
-    border-radius: 10px;
+    border-top-right-radius: 30px;
     width: 50px;
     box-sizing: initial;  
     border-left: 2px solid #ffb703;
@@ -128,11 +128,13 @@ body {
 /*borde final redondeado*/
 .navigations ul li b:nth-child(1){
     position: absolute;
-    top: -20px;
-    height:20px;
-    width: 100%;
+    top: -40px;
+    right:0px;
+    height:40px;
+    width: 25px;
     background-color: #ffffff;
     display: none;
+    border-top-left-radius: 100%;
 }
 
 .navigations ul li b:nth-child(1)::before{
@@ -142,17 +144,20 @@ body {
     left: 0px;
     width: 100%;
     height: 100%;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 70%;
     background: var(--navbar-item-hover);
 }
 
 .navigations ul li b:nth-child(2){
     position: absolute;
-    bottom: -20px;
-    height:20px;
-    width: 100%;
+    bottom: -40px;
+    right: 0px;
+    height:40px;
+    width: 25px;
     background-color: #ffffff;
     display: none;
+    border-bottom-left-radius: 100%;
 }
 
 .navigations ul li b:nth-child(2)::before{
@@ -162,7 +167,8 @@ body {
     left: 0px;
     width: 100%;
     height: 100%;
-    border-top-right-radius: 20px;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 70%;
     background: var(--navbar-item-hover);
 }
 .navigations ul li.active b:nth-child(2),
@@ -181,7 +187,6 @@ body {
     background-color: var(--navbar);
     justify-content: space-between;
 }
-
 
 .navbar-item {
     color: var(--nabbar-item);
