@@ -14,3 +14,16 @@ for (let i = 0; i < list.length; i++) {
         list[i].className = 'list active'
     }
 }
+
+
+$(document).ready(function () {
+    $('.section article').hide();
+    $('.section article:first').show();
+    $('ul li a').click(function () {
+        var menuClick = $(this).attr('href');
+       $('.section article').hide();
+       $(menuClick).show();
+       console.log(menuClick);
+        return true;
+    })
+})

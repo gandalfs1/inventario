@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -52,7 +53,7 @@
             <li class="list">
                 <b></b>
                 <b></b>
-                <a href="#">
+                <a href="#person">
                     <span class="icon">
                         <ion-icon name="person"></ion-icon>
                     </span>
@@ -61,7 +62,7 @@
             <li class="list">
                 <b></b>
                 <b></b>
-                <a href="#">
+                <a href="#chat">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses"></ion-icon>
                     </span>
@@ -70,7 +71,7 @@
             <li class="list">
                 <b></b>
                 <b></b>
-                <a href="#">
+                <a href="#settings">
                     <span class="icon">
                         <ion-icon name="settings"></ion-icon>
                     </span>
@@ -79,7 +80,7 @@
             <li class="list">
                 <b></b>
                 <b></b>
-                <a href="#">
+                <a href="#help">
                     <span class="icon">
                         <ion-icon name="help"></ion-icon>
                     </span>
@@ -87,39 +88,81 @@
             </li>
         </ul>
     </div>
-   
+
 
     <div class="section">
-    <main class="main-content" id="home">
-        <div class="crud-container">
-            <div class="crud-header">
-                <h1>Productos en Inventario</h1>
-                <button class="button is-success" id="openRegisterModal">
-                    <i class="fas fa-plus"></i></i>
-                    <span>Nuevo Producto</span>
-                </button>
-            </div>
-            <div class="table-container tableWrap">
-                <table class="table  is-striped is-narrow is-hoverable is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>Codigo</th>
-                            <th>Detalle</th>
-                            <th>Precio Unitario</th>
-                            <th>Precio Total</th>
-                            <th>Cantidad</th>
-                            <th>Opcion</th>
-                        </tr>
-                    </thead>
-                    <tbody id="products-table">
+        <article id="home">
+            <main class="main-content">
+                <div class="crud-container">
+                    <div class="crud-header">
+                        <h1>Productos en Inventario</h1>
+                        <button class="button is-success" id="openRegisterModal">
+                            <i class="fas fa-plus"></i></i>
+                            <span>Nuevo Producto</span>
+                        </button>
+                    </div>
+                    <div class="table-container tableWrap">
+                        <table class="table  is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Detalle</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Precio Total</th>
+                                    <th>Cantidad</th>
+                                    <th>Opcion</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-table">
+    
+                            </tbody>
+    
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </article>
 
-                    </tbody>
-
-                </table>
-            </div>
-        </div>
-    </main>
-</div>
+        <article id="person">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aspernatur, consequuntur beatae ullam corporis, necessitatibus, at porro pariatur doloribus mollitia nulla dolorum nesciunt suscipit odit voluptas omnis iusto facilis. Nam.
+            Architecto totam harum dolore laudantium aliquam, dolorum fugiat ullam facilis temporibus? Accusamus officia optio ipsam tempora fuga cum voluptas placeat deserunt, unde culpa! Sint odio dolores dolore. Quos, esse accusamus?
+            Animi laboriosam illum eum dolores natus, labore porro nulla? Alias ducimus tempore, veritatis unde delectus dolores ut error exercitationem laudantium quas, blanditiis libero, obcaecati sint accusantium corporis ipsum necessitatibus fugit?
+            Sed quis quae explicabo dolorum consectetur, necessitatibus ab recusandae quaerat illum praesentium distinctio nisi repellat libero ipsam non? Ea dolore ex vitae quaerat non corrupti perferendis cupiditate laboriosam numquam delectus!
+            Accusantium, aut? Odio, suscipit aliquam voluptate accusamus enim similique iure fugit corrupti assumenda laudantium quos officia? Sunt ipsa provident quibusdam quas veniam iusto optio perferendis qui commodi. Voluptatibus, illo vero!
+            Voluptate, consequuntur quo. Quas nostrum nulla provident culpa placeat laboriosam labore nisi veritatis suscipit consectetur accusamus totam ullam aspernatur cum corrupti maiores, facere, harum praesentium non ducimus doloribus expedita in!
+            Fuiet et, magni sapiente dolores quasi nesciunt rem perferendis nostrum! Ratione molestiae ducimus facilis, id corrupti quasi dicta eos. Obcaecati, autem culpa ipsam aliquid voluptate ab maxime dolor optio.
+            Fugit doloremque culpa molestias ducimus ut quos et possimus nostrum explicabo dolorem, earum tempora quaerat ea sunt adipisci excepturi obcaecati praesentium. Sed veritatis repellendus voluptatem ad et ducimus ex corrupti.
+            Blanditiis tenetur magnam doloribus quisquam voluptate, earum, eveniet unde magni temporibus minus saepe quis nobis maiores. Hic explicabo impedit quidem nemo, recusandae dolorum, numquam repellendus alias non sapiente corporis quibusdam.
+            Ipsa nam ullam animi dolore cumque rem dolorum odio quis culpa, doloribus nisi quam a iure laboriosam aliquam necessitatibus nulla officia, porro aliquid nobis! Ipsam deserunt possimus cumque excepturi alias.
+            Velit culpa maxime nobis! At nostrum numquam provident hic, inventore atque sit eos libero nemo dolor nihil fuga iure magni, repudiandae repellat possimus corrupti distinctio mollitia recusandae rerum consectetur aut?
+            Distinctio molestiae ratione exercitationem explicabo culpa. Consequatur voluptate dolore eius quos mollitia reprehenderit veniam cum dicta, expedita neque esse, ab sapiente! Animi, dolores? Doloribus reiciendis sunt odio ipsam eos dolorum?
+            Cumque tempora vero vel et iste ducimus quos itaque, excepturi porro nesciunt voluptatem voluptate a doloribus dolores unde aliquid, commodi nobis alias? Libero assumenda a dolorem, id hic nobis aperiam?
+            Fuga, perferendis fugit natus vel ipsam voluptatum soluta? Aspernatur, libero impedit natus non veritatis voluptas dignissimos magnam tenetur, deleniti, quod deserunt. Eos rerum aut odio explicabo quam inventore accusamus a?
+            Voluptatibus mollitia quibusdam, provident laboriosam commodi corrupti omnis sit maxime ex, deserunt dolore nihil impedit doloribus nam odit porro iure voluptate id quasi suscipit. Asperiores recusandae nihil incidunt mollitia eaque.</span>
+        </article>
+        <article id="chat">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aspernatur, consequuntur beatae ullam corporis, necessitatibus, at porro pariatur doloribus mollitia nulla dolorum nesciunt suscipit odit voluptas omnis iusto facilis. Nam.
+            oluptatibus mollitia quibusdam, provident laboriosam commodi corrupti omnis sit maxime ex, deserunt dolore nihil impedit doloribus nam odit porro iure voluptate id quasi suscipit. Asperiores recusandae nihil incidunt mollitia eaque.</span>
+        </article>
+        <article id="settings">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aspernatur, consequuntur beatae ullam corporis, necessitatibus, at porro pariatur doloribus mollitia nulla dolorum nesciunt suscipit odit voluptas omnis iusto facilis. Nam.
+            Arcui sapiente illo recusandae blanditiis placeat. Sint, hic animi. Quisquam tempore delectus velit recusandae veritatis blanditiis deleniti excepturi porro, numquam ex dolore sint assumenda placeat iusto rem ducimus natus.
+            Sint eveniet et, magni sapiente dolores quasi nesciunt rem perferendis nostrum! Ratione molestiae ducimus facilis, id corrupti quasi dicta eos. Obcaecati, autem culpa ipsam aliquid voluptate ab maxime dolor optio.
+            Fugit doloremque culpa molestias ducimus ut quos et possimus nostrum explicabo dolorem, earum tempora quaerat ea sunt adipisci excepturi obcaecati praesentium. Sed veritatis repellendus voluptatem ad et ducimus ex corrupti.
+            Blanditiis tenetur magnam doloribus quisquam voluptate, earum, eveniet unde magni temporibus minus saepe quis nobis maiores. Hic explicabo impedit quidem nemo, recusandae dolorum, numquam repellendus alias non sapiente corporis quibusdam.
+            Ipsa nam ullam animi dolore cumque rem dolorum odio quis culpa, doloribus nisi quam a iure laboriosam aliquam necessitatibus nulla officia, porro aliquid nobis! Ipsam deserunt possimus cumque excepturi alias.
+            Velit culpa maxime nobis! At nostrum numquam provident hic, inventore atque sit eos libero nemo dolor nihil fuga iure magni, repudiandae repellat possimus corrupti distinctio mollitia recusandae rerum consectetur aut?
+            Distinctio molestiae ratione exercitationem explicabo culpa. Consequatur voluptate dolore eius quos mollitia reprehenderit veniam cum dicta, expedita neque esse, ab sapiente! Animi, dolores? Doloribus reiciendis sunt odio ipsam eos dolorum?
+            Cumque tempora vero vel et iste ducimus quos itaque, excepturi porro nesciunt voluptatem voluptate a doloribus dolores unde aliquid, commodi nobis alias? Libero assumenda a dolorem, id hic nobis aperiam?
+            Fuga, perferendis fugit natus vel ipsam voluptatum soluta? Aspernatur, libero impedit natus non veritatis voluptas dignissimos magnam tenetur, deleniti, quod deserunt. Eos rerum aut odio explicabo quam inventore accusamus a?
+            Voluptatibus mollitia quibusdam, provident laboriosam commodi corrupti omnis sit maxime ex, deserunt dolore nihil impedit doloribus nam odit porro iure voluptate id quasi suscipit. Asperiores recusandae nihil incidunt mollitia eaque.</span>
+        </article>
+        <article id="help">
+            <span> iste ducimus quos itaque, excepturi porro nesciunt voluptatem voluptate a doloribus dolores unde aliquid, commodi nobis alias? Libero assumenda a dolorem, id hic nobis aperiam?
+            Fuga, perferendis fugit natus vel ipsam voluptatum soluta? Aspernatur, libero impedit natus non veritatis voluptas dignissimos magnam tenetur, deleniti, quod deserunt. Eos rerum aut odio explicabo quam inventore accusamus a?
+            Voluptatibus mollitia quibusdam, provident laboriosam commodi corrupti omnis sit maxime ex, deserunt dolore nihil impedit doloribus nam odit porro iure voluptate id quasi suscipit. Asperiores recusandae nihil incidunt mollitia eaque.</span>
+        </article>
+    </div>
     <div class="modal" id="modal">
         <div class="modal-background"></div>
         <div class="modal-card">

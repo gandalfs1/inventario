@@ -12,10 +12,17 @@
 }
 
 body {
+    display:flex;
     font-family: 'Roboto Slab', serif;
     min-height: 100vh;
 }
-
+.section{
+    width: 90%;
+    margin: 0 auto;
+}
+.section .article{
+    left: 50px;
+}
 /*menu lateral*/
 .navigations {
     height: 100vh;
@@ -31,6 +38,7 @@ body {
     align-content: center;
 }
 .navigations.active {
+    position: relative;
     width: 300px;
     background: var(--theadColor);
     border-left: 2px solid var(--navbar-item-hover);
@@ -206,14 +214,14 @@ body {
 /*fin navbar*/
 /*main*/
 .main-content {
-    height: 82vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-content .crud-container {
-    width: 60%;
+    width: 100%;
     border: 10px solid --navbar;
     padding: 2rem 2rem;
     overflow: auto;
